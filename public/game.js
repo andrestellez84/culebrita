@@ -6,6 +6,17 @@ let direction = 'LEFT';
 let food = randomFood();
 let score = 0;
 
+function restartGame() {
+  clearInterval(game);
+  snake = [{ x: 9 * box, y: 10 * box }];
+  direction = 'LEFT';
+  food = randomFood();
+  score = 0;
+  document.getElementById('score').value = score;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  game = setInterval(draw, 100);
+}
+
 function randomFood() {
   return {
     x: Math.floor(Math.random() * 19 + 1) * box,
@@ -68,7 +79,7 @@ function collision(head, array) {
   return false;
 }
 
-const game = setInterval(draw, 100);
+let game = setInterval(draw, 100);
 
 async function loadScores() {
   const res = await fetch('/scores');
@@ -97,3 +108,4 @@ async function saveScore(e) {
 
 document.getElementById('score-form').addEventListener('submit', saveScore);
 window.addEventListener('load', loadScores);
+document.getElementById('restart').addEventListener('click', restartGame);
