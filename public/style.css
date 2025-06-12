@@ -25,3 +25,7 @@ h1 {
 #scores li {
   margin: 4px 0;
 }
+
+#restart {
+  margin-top: 10px;
+}
