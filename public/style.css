@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+#game {
+  border: 1px solid #333;
+  background-color: #fff;
+}
+
+#scoreboard {
+  margin-top: 20px;
+}
+
+#scores {
+  list-style: none;
+  padding: 0;
+}
+
+#scores li {
+  margin: 4px 0;
+}

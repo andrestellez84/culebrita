@@ -1,0 +1,21 @@
+{
+  "name": "culebrita",
+  "version": "1.0.0",
+  "description": "Juego de culebrita con Codex",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "supertest": "^7.1.1"
+  }
+}
